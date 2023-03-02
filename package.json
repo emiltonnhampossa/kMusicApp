@@ -1,0 +1,29 @@
+{
+  "name": "emusic-app-grupo-1",
+  "version": "0.0.1",
+  "description": "eMusic Ė um aplicativo de reprodução e downloads de musicas.Ao abrir o aplicativo, você será saudado por uma vasta seleção de músicas e artistas de todos os gêneros, permitindo que você explore novos sons e descubra novas paixões musicais",
+  "productName": "eMusic App",
+  "author": "helenachipeja<helenaachipeja@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "pinia": "^2.0.11",
+    "@quasar/extras": "^1.0.0",
+    "quasar": "^2.6.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.14"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
