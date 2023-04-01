@@ -1,5 +1,9 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+ <div>
+  <q-fab elevated round icon="color_lens" @click="toggleTheme" 
+  class="q-fab--absolute q-fab--bottom q-fab--right"/>
+    <q-layout view="lHh Lpr lFf">
+      
     <q-header elevated>
         <q-toolbar>
 
@@ -22,7 +26,7 @@
               <q-item-section>Musicas BAixadas</q-item-section>
             </q-item>
             <q-separator />
-            <q-item clickable v-close-popup exact>
+            <q-item to="/login" clickable v-close-popup exact>
               <q-item-section>Login</q-item-section>
 
             </q-item>
@@ -36,6 +40,8 @@
       <router-view />
     </q-page-container>
   </q-layout>
+  </div>
+
 </template>
 
 <script>
@@ -93,6 +99,11 @@ export default defineComponent({
   components: {
     EssentialLink
   },
+  methods: {
+    toggleTheme() {
+      this.$q.dark.toggle();
+    }
+  },
 
   setup () {
     const leftDrawerOpen = ref(false)
@@ -107,3 +118,16 @@ export default defineComponent({
   }
 })
 </script>
+<style>
+.q-fab--absolute {
+  position: absolute;
+}
+
+.q-fab--bottom {
+  bottom: 24px;
+}
+
+.q-fab--right {
+  right: 24px;
+}
+</style>

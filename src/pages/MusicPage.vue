@@ -1,19 +1,40 @@
 <template>
-  <q-page class="q-pa-md bg-dark text-white">
-    <div class="text-h6">
+  <q-page class="q-pa-md text-black">
+    <div class="text-grey-8" >
       Lista das Musicas
     </div>
-    <q-list bordered class="q-mt-lg">
-      <music-component
+    <q-list class="q-mt-lg">
+      <div class="music-list">
+    <music-component
       v-for="music in musicsList"
       :music="music"
-      />
-
-
-
+    />
+    
+    </div>
+    <div>
+    <q-btn @click="showForm">Adicionar nova música</q-btn>
+    <q-dialog v-model="showingForm">
+      <q-card>
+        <q-card-section>
+          <q-form @submit="addMusic">
+            <q-input v-model="title" label="Título" required></q-input>
+            <q-input v-model="artist" label="Artista" required></q-input>
+            <q-file v-model="audioFile" label="Arquivo de áudio" required></q-file>
+            <q-btn type="submit" label="Enviar"></q-btn>
+          </q-form>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+  </div>
+<div>
+  
+</div>
     </q-list>
   </q-page>
+
+    
 </template>
+
 
 <script>
 
@@ -30,7 +51,8 @@ export default defineComponent({
         fileUrl:'music-files/01. Intro (feat Maplango).mp3',
       },
         {id:'02. Presos Injustamente (Feat Maplango).mp3',
-        title:'02.LMS- Presos Injustamente (Feat Maplango)'
+        title:'02.LMS- Presos Injustamente (Feat Maplango)',
+        fileUrl:'music-files/02. Presos Injustamente (Feat Maplango).mp3',
 
       },
         {

@@ -15,7 +15,23 @@ const { configure } = require('quasar/wrappers');
 module.exports = configure(function (/* ctx */) {
   return {
     
-
+    theme: {
+      dark: true,
+      themes: {
+        dark: {
+          primary: '#3f51b5',
+          secondary: '#b0bec5',
+          accent: '#8c9eff',
+          error: '#b71c1c'
+        },
+        light: {
+          primary: '#1976D2',
+          secondary: '#424242',
+          accent: '#82B1FF',
+          error: '#FF5252'
+        }
+      }
+    },
     // https://v2.quasar.dev/quasar-cli/prefetch-feature
     // preFetch: true,
 
